@@ -9,3 +9,5 @@ dist/
 *.key
 *.pem
 machines.json
+
+*.dSYM/

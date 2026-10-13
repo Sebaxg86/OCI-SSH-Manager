@@ -11,10 +11,12 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleVersion</key>
-	<string>0.1</string>
+	<string>0.2</string>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>Abre conexiones SSH en pestañas de Terminal con el perfil elegido.</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.2</string>
 </dict>
 </plist>

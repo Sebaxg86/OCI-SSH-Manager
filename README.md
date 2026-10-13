@@ -38,7 +38,7 @@ Este proyecto administra conexiones SSH; no administra recursos mediante la API 
 
 ## Interfaz gráfica disponible
 
-Abre `OCI SSH Manager.app` con doble clic. Mantén la app en esta carpeta junto a los módulos Python (este lanzador local todavía no incluye Python dentro del paquete).
+Abre `OCI SSH Manager.app` con doble clic. Mantén la app en esta carpeta junto a los módulos Python. El lanzador nativo ejecuta Python dentro del proceso de OCI SSH Manager; utiliza el Python 3.13 de Homebrew instalado en este Mac.
 
 La ventana permite agregar, editar, conectar, archivar y restaurar. Usa el registro existente y propone el perfil `Pro`, confirmado en este Mac; puedes cambiar el nombre en la ventana.
 
@@ -94,3 +94,7 @@ En las vistas generales, solo aparecen carpetas con máquinas que coinciden con 
 ## Icono de la aplicación
 
 Logo generado con la herramienta integrada de generación de imágenes. Original: `assets/app-icon.png`. Prompt: `assets/logo-prompt.txt`. El icono multirresolución de macOS está en `OCI SSH Manager.app/Contents/Resources/AppIcon.icns`.
+
+### Identidad de macOS
+
+El lanzador nativo está en `native/launcher.c`. Para reconstruirlo: `python3.13 native/build_launcher.py` (requiere herramientas de desarrollo de Apple y Python 3.13/Tkinter de Homebrew). Se verifican identidad y apertura de Tk con `"OCI SSH Manager.app/Contents/MacOS/launch" --diagnose`. No sustituye el icono de otra aplicación. El logo ocupa el lienzo completo; macOS aplica su máscara exterior.

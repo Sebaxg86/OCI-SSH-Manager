@@ -18,10 +18,6 @@ class App:
         self.root = root
         root.withdraw()
         self.messages = Messages(root)
-        icon_path = Path(__file__).with_name('assets') / 'app-icon.png'
-        if icon_path.exists():
-            self.app_icon = tk.PhotoImage(master=root, file=str(icon_path)).subsample(4)
-            root.iconphoto(True, self.app_icon)
         self.icons = load_icons(root)
         self.tree_icons = {}
         for name in ('folder', 'grip'):
