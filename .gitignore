@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+build/
+dist/
+*.egg-info/
+.env
+*.key
+*.pem
+machines.json
